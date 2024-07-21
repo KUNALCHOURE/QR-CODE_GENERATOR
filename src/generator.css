@@ -18,9 +18,18 @@ form{
 .form input{
     width: 500px;
     height: 30px;
+    border-radius: 2px;
+    border: none;
 }
 .form button{
     width: 150px;
     height: 30px;
+    background-color:  #687684;
+    color: white;
+    border: none;
+    border-radius: 5px;
     
+}
+.form button:hover{
+    background-color:  #2c3e50;
 }
