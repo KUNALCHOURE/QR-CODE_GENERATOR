@@ -3,7 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 50px;
+    border: 2px solid white;
+   width: 700px;
+   height: 500px;
 }
 form{
  display: flex;

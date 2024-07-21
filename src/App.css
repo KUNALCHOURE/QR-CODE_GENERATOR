@@ -2,3 +2,8 @@ h1{
     text-align:center;
     color: white;
 }
+.qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
