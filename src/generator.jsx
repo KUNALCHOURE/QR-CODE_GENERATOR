@@ -35,6 +35,9 @@ console.log("Done");
          
         
          </div>
+         <div className="download">
+          <a href={qrcode}  download="qrcode.png"></a>
+         </div>
          </div>
         
         </>
