@@ -45,9 +45,7 @@ if(downloadl.current){
          
         
          </div>
-         <div className="download">
-          <a href={qrcode} ref={downloadl} download="qrcode.png">DOWNLOAD</a>
-         </div>
+       
          </div>
         
         </>
