@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useRef, useState,useEffect } from "react"
 import "./generator.css"
 export default function Generate(){
   let[val,setval]=useState("");
   let[qrcode,setqrcode]=useState(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example`);
+  const downloadl=useRef(null);
 
 
   let handlechange=(event)=>{
@@ -10,11 +11,20 @@ export default function Generate(){
     console.log(value);
     setval(value);
   }
-  
+  useEffect(() => {
+    if (downloadl.current) {
+      downloadl.current.href = qrcode;
+    }
+  }, [qrcode]);
+
   let handlesubmit=(event)=>{
 event.preventDefault();
-setqrcode( `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${val}` )
+let qr=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${val}`
+setqrcode(qr);  
 console.log("Done");
+if(downloadl.current){
+  downloadl.current.href=qr;
+}
 
     
   }
@@ -36,7 +46,7 @@ console.log("Done");
         
          </div>
          <div className="download">
-          <a href={qrcode}  download="qrcode.png"></a>
+          <a href={qrcode} ref={downloadl} download="qrcode.png">DOWNLOAD</a>
          </div>
          </div>
         
