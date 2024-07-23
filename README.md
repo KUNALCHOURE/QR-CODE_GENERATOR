@@ -20,3 +20,5 @@ The QR Code Generator is a web application that allows users to generate QR code
 - **Dynamic Updates**: QR code updates in real-time as you enter new text.
 - **User-Friendly Interface**: Simple and intuitive design for easy use.
 
+## Screenshot
+![Screenshot 2024-07-23 214434](https://github.com/user-attachments/assets/28f5e7c9-e608-4101-87b8-6c98b9ce4547)
